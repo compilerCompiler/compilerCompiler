@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VLibrary</string>
+    <string name="password">Contraseña usuario</string>
 </resources>
