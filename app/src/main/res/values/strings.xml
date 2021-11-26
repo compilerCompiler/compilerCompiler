@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">VLibrary</string>
+    <string name="app_name">V-Library</string>
+    <string name="bienvenido">Bienvenido a la biblioteca virtual oficial de la Asamblea Legislativa Plurinacional! </string>
+    <string name="opciones">Elije una de las siguientes opciones:</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>
