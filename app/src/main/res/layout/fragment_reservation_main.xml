@@ -4,42 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AzulClaro">
+    android:background="@color/AzulClaroModoNoche">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/AzulOscuro"
-        app:layout_constraintBottom_toTopOf="@+id/guideLineTopR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/txReservation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="Reservación"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/blanco"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideLineTopR"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </FrameLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideLineTopR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
 
     <ImageView
         android:id="@+id/btSearchReservation"
@@ -50,7 +16,7 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideLineTopR"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/button_background" />
 
     <ImageView
@@ -79,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.36" />
+        app:layout_constraintGuide_percent="0.22" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeftReservation"
@@ -100,8 +66,9 @@
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
+        android:buttonTint="@color/AzulOscuro"
         android:text="Título"
         app:layout_constraintBottom_toTopOf="@+id/guidelineSearchSection"
         app:layout_constraintStart_toStartOf="@id/guidelineLeftReservation"
@@ -114,6 +81,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
+        android:buttonTint="@color/AzulOscuro"
         android:text="Autor"
         app:layout_constraintBottom_toTopOf="@+id/guidelineSearchSection"
         app:layout_constraintStart_toEndOf="@+id/checkBoxTituloR"
@@ -126,6 +94,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="5dp"
+        android:buttonTint="@color/AzulOscuro"
         android:text="Disponibilidad"
         app:layout_constraintBottom_toTopOf="@+id/guidelineSearchSection"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRightReservation"
