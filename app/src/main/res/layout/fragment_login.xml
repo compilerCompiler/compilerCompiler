@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/AzulOscuro"
+        app:layout_constraintBottom_toBottomOf="@+id/ivEmail"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/ivEmail" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivEmail"
+        app:layout_constraintStart_toStartOf="@+id/ivEmail"
+        app:layout_constraintTop_toTopOf="@+id/ivEmail"
+        app:srcCompat="@drawable/user" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="188dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColor="@color/AzulOscuro"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPassword"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/ivPassword" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPassword"
+        app:layout_constraintStart_toStartOf="@+id/ivPassword"
+        app:layout_constraintTop_toTopOf="@+id/ivPassword"
+        app:srcCompat="@drawable/icons8_contrase_a_96" />
+
+
+    <ImageView
+        android:id="@+id/ivPassword"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivEmail" />
+
+    <ImageView
+        android:id="@+id/ivEmail"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_next"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="152dp"
+        android:layout_height="64dp"
+        android:text="accept"
+        android:textColor="@color/blanco"
+        app:cornerRadius="30sp"
+        android:backgroundTint="@color/AzulOscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPassword"
+        app:strokeColor="@color/black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

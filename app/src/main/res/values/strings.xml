@@ -5,4 +5,6 @@
     <string name="opciones">Elije una de las siguientes opciones:</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="error">ERROR\n There is an error in your request. Please try again later or verify your internet connection.</string>
+    <string name="back">Go Back</string>
 </resources>
