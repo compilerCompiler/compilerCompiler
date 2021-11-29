@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HelpFragment"
+    android:background="@color/AzulClaroModoNoche">
+
+    <Button
+        android:id="@+id/button_login"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="152dp"
+        android:layout_height="64dp"
+        android:text="Enviar mail"
+        android:textColor="@color/blanco"
+        app:cornerRadius="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/blanco" />
+
+    <Button
+        android:id="@+id/button_register"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="152dp"
+        android:layout_height="64dp"
+        android:text="Redes sociales"
+        android:textColor="@color/blanco"
+        app:cornerRadius="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
+        app:strokeColor="@color/blanco" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

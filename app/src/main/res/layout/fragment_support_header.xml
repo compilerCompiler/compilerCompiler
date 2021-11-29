@@ -14,8 +14,8 @@
         app:layout_constraintGuide_begin="135dp" />
 
     <fragment
-        android:id="@+id/fragmentMenuAdminHeader"
-        android:name="com.upb.vlibrary.MenuAdminFragment"
+        android:id="@+id/fragmentSupport"
+        android:name="com.upb.vlibrary.SupportFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,9 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:textSize="32sp"
-        android:text="Biblioteca y Archivo Histórico de la Asamblea Legislativa Plurinacional"
+        android:text="Ayuda y Contacto"
         android:textColor="@color/blanco"
-        app:layout_constraintBottom_toTopOf="@+id/fragmentMenuAdminHeader"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentSupport"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

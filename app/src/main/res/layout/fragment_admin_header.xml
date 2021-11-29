@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="135dp" />
+        app:layout_constraintGuide_begin="230dp" />
 
     <fragment
-        android:id="@+id/fragmentMenuAdminHeader"
-        android:name="com.upb.vlibrary.MenuAdminFragment"
+        android:id="@+id/fragmentHelpHeader"
+        android:name="com.upb.vlibrary.ContactFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,10 +28,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:textSize="32sp"
-        android:text="Biblioteca y Archivo Histórico de la Asamblea Legislativa Plurinacional"
+        android:layout_marginTop="32dp"
+        android:text="Administración"
         android:textColor="@color/blanco"
-        app:layout_constraintBottom_toTopOf="@+id/fragmentMenuAdminHeader"
+        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentHelpHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_admin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
