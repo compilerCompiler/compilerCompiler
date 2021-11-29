@@ -7,7 +7,7 @@
     android:background="@color/AzulClaroModoNoche">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewVideoMult"
         android:layout_width="0dp"
         android:layout_height="200dp"
         class="com.google.android.youtube.player.YouTubePlayerView"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgBackButtonMult"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="0dp"
@@ -28,11 +28,11 @@
         android:layout_marginEnd="0dp"
         app:layout_constraintEnd_toEndOf="@id/guidelineRigthMult"
         app:layout_constraintStart_toStartOf="@id/guidelineLeftMult"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/viewVideoMult"
         app:srcCompat="@drawable/button_background_2" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txBotonMultimediaBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -41,9 +41,9 @@
         android:text="Volver al menu multimedia"
         android:textColor="@color/blanco"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imgBackButtonMult"
+        app:layout_constraintStart_toStartOf="@+id/imgBackButtonMult"
+        app:layout_constraintTop_toTopOf="@+id/imgBackButtonMult" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeftMult"
