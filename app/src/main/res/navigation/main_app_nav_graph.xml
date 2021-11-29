@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_app_nav_graph"
+    app:startDestination="@id/optionsLoginfragment">
+    <fragment
+        android:id="@+id/optionsLoginfragment"
+        android:name="com.upb.vlibrary.OptionsLoginfragment"
+        android:label="OptionsLoginfragment"
+        tools:layout="@layout/fragment_login_options">
+        <action
+            android:id="@+id/action_optionsLoginfragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_optionsLoginfragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.upb.vlibrary.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_errorFragment"
+            app:destination="@id/errorFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_menuUserFragment"
+            app:destination="@id/menuUserFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_menuAdminFragment"
+            app:destination="@id/menuAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.upb.vlibrary.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_errorFragment"
+            app:destination="@id/errorFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_menuUserFragment"
+            app:destination="@id/menuUserFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_menuAdminFragment"
+            app:destination="@id/menuAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.upb.vlibrary.ErrorFragment"
+        android:label="ErrorFragment"
+        tools:layout="@layout/fragment_error"/>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.upb.vlibrary.AdminFragment"
+        android:label="AdminFragment"
+        tools:layout="@layout/fragment_admin"/>
+    <fragment
+        android:id="@+id/articleSearchFragment"
+        android:name="com.upb.vlibrary.ArticleSearchFragment"
+        android:label="ArticleSearchFragment"
+        tools:layout="@layout/fragment_articles_search"/>
+    <fragment
+        android:id="@+id/menuAdminFragment"
+        android:name="com.upb.vlibrary.MenuAdminFragment"
+        android:label="fragment_menu_admin"
+        tools:layout="@layout/fragment_menu_admin">
+        <action
+            android:id="@+id/action_menuAdminFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+        <action
+            android:id="@+id/action_menuAdminFragment_to_articleSearchFragment"
+            app:destination="@id/articleSearchFragment" />
+        <action
+            android:id="@+id/action_menuAdminFragment_to_multimediaMainFragment"
+            app:destination="@id/multimediaMainFragment" />
+        <action
+            android:id="@+id/action_menuAdminFragment_to_reservationMainFragment"
+            app:destination="@id/reservationMainFragment" />
+        <action
+            android:id="@+id/action_menuAdminFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuUserFragment"
+        android:name="com.upb.vlibrary.MenuUserFragment"
+        android:label="fragment_menu_user"
+        tools:layout="@layout/fragment_menu_user" >
+        <action
+            android:id="@+id/action_menuUserFragment_to_articleSearchFragment"
+            app:destination="@id/articleSearchFragment" />
+        <action
+            android:id="@+id/action_menuUserFragment_to_multimediaMainFragment"
+            app:destination="@id/multimediaMainFragment" />
+        <action
+            android:id="@+id/action_menuUserFragment_to_reservationMainFragment"
+            app:destination="@id/reservationMainFragment" />
+        <action
+            android:id="@+id/action_menuUserFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multimediaMainFragment"
+        android:name="com.upb.vlibrary.MultimediaMainFragment"
+        android:label="MultimediaMainFragment"
+        tools:layout="@layout/fragment_multimedia_main">
+        <action
+            android:id="@+id/action_multimediaMainFragment_to_multimediaPageFragment"
+            app:destination="@id/multimediaPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multimediaPageFragment"
+        android:name="com.upb.vlibrary.MultimediaPageFragment"
+        android:label="MultimediaPageFragment"
+        tools:layout="@layout/fragment_multimedia_page"/>
+    <fragment
+        android:id="@+id/reservationMainFragment"
+        android:name="com.upb.vlibrary.ReservationMainFragment"
+        android:label="ReservationMainFragment"
+        tools:layout="@layout/fragment_reservation_main">
+        <action
+            android:id="@+id/action_reservationMainFragment_to_reservationFormFragment"
+            app:destination="@id/reservationFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservationFormFragment"
+        android:name="com.upb.vlibrary.ReservationFormFragment"
+        android:label="ReservationFormFragment"
+        tools:layout="@layout/fragment_reservation_details">
+        <action
+            android:id="@+id/action_reservationFormFragment_to_reservationSuccessFragment"
+            app:destination="@id/reservationSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservationSuccessFragment"
+        android:name="com.upb.vlibrary.ReservationSuccessFragment"
+        android:label="ReservationSuccessFragment"
+        tools:layout="@layout/fragment_reservation_success"/>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.upb.vlibrary.SupportFragment"
+        android:label="SupportFragment"
+        tools:layout="@layout/fragment_support">
+        <action
+            android:id="@+id/action_supportFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_helpFragment2"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.upb.vlibrary.HelpFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_help"/>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.upb.vlibrary.ContactFragment"
+        android:label="ContactFragment"
+        tools:layout="@layout/fragment_contact"/>
+</navigation>
