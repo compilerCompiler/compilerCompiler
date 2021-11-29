@@ -8,7 +8,7 @@
     android:background="@color/AzulClaroModoNoche">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCities"
+        android:id="@+id/rvAdmin"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
