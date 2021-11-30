@@ -9,62 +9,59 @@
 
     <ImageView
         android:id="@+id/bt_multimedia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="28dp"
         android:src="@drawable/ic_multimedia"
         app:layout_constraintBottom_toTopOf="@+id/bt_ayuda"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/bt_reserva"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/bt_busqueda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_busqueda"
-        app:layout_constraintBottom_toTopOf="@+id/bt_admin"
         app:layout_constraintEnd_toStartOf="@+id/bt_ayuda"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_reserva" />
 
     <ImageView
         android:id="@+id/bt_ayuda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="3dp"
         android:src="@drawable/ic_ayuda"
-        app:layout_constraintBottom_toTopOf="@+id/bt_admin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/bt_busqueda"
         app:layout_constraintTop_toBottomOf="@+id/bt_multimedia" />
 
     <ImageView
         android:id="@+id/bt_reserva"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_reserva"
         app:layout_constraintBottom_toTopOf="@+id/bt_busqueda"
         app:layout_constraintEnd_toStartOf="@+id/bt_multimedia"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/bt_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
         android:src="@drawable/ic_admin_user"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_busqueda" />
 </androidx.constraintlayout.widget.ConstraintLayout>

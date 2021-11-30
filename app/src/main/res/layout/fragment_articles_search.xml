@@ -29,12 +29,12 @@
         app:layout_constraintTop_toTopOf="@+id/btSearch"
         app:srcCompat="@drawable/ic_search" />
 
-    <TextView
+    <EditText
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Buscar"
+        android:hint="Buscar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/btSearch"
         app:layout_constraintStart_toEndOf="@+id/icon_search"

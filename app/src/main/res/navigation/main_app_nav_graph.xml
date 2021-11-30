@@ -146,13 +146,13 @@
             android:id="@+id/action_supportFragment_to_contactFragment"
             app:destination="@id/contactFragment" />
         <action
-            android:id="@+id/action_supportFragment_to_helpFragment2"
+            android:id="@+id/action_supportFragment_to_helpFragment"
             app:destination="@id/helpFragment" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
         android:name="com.upb.vlibrary.HelpFragment"
-        android:label="fragment_contact"
+        android:label="HelpFragment"
         tools:layout="@layout/fragment_help"/>
     <fragment
         android:id="@+id/contactFragment"

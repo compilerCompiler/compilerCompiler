@@ -12,11 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/ic_reserva"
         app:layout_constraintBottom_toTopOf="@+id/bt_busqueda"
         app:layout_constraintEnd_toStartOf="@+id/bt_multimedia"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,12 +23,11 @@
         android:id="@+id/bt_multimedia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="28dp"
         android:src="@drawable/ic_multimedia"
         app:layout_constraintBottom_toTopOf="@+id/bt_ayuda"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/bt_reserva"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,11 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/ic_busqueda"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bt_ayuda"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_reserva" />
 
@@ -50,12 +46,10 @@
         android:id="@+id/bt_ayuda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="76dp"
         android:src="@drawable/ic_ayuda"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/bt_busqueda"
         app:layout_constraintTop_toBottomOf="@+id/bt_multimedia" />
 </androidx.constraintlayout.widget.ConstraintLayout>
