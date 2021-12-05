@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.upb.vlibrary.databinding.FragmentArticleSearchInfoBinding
 
@@ -25,5 +26,9 @@ class ArticleSearchInfoFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         libro= args.infoBook
         binding.articleInfo=libro
+        binding.imgButtonReservarAsInfo.setOnClickListener {
+            val goToReservationPage = ArticleSearchInfoFragmentDirections.actionArticleSearchInfoFragmentToReservationFormFragment(libro)
+            findNavController().navigate(goToReservationPage)
+        }
     }
 }

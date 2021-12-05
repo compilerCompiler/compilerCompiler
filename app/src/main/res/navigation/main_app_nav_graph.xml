@@ -135,6 +135,9 @@
         <action
             android:id="@+id/action_reservationFormFragment_to_reservationSuccessFragment"
             app:destination="@id/reservationSuccessFragment" />
+        <argument
+            android:name="bookInfo"
+            app:argType="com.upb.vlibrary.Books" />
     </fragment>
     <fragment
         android:id="@+id/reservationSuccessFragment"
@@ -171,5 +174,8 @@
         <argument
             android:name="infoBook"
             app:argType="com.upb.vlibrary.Books" />
+        <action
+            android:id="@+id/action_articleSearchInfoFragment_to_reservationFormFragment"
+            app:destination="@id/reservationFormFragment" />
     </fragment>
 </navigation>
