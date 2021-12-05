@@ -21,23 +21,23 @@
 
     <ImageView
         android:id="@+id/icon_search"
-        android:layout_width="44dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/btSearch"
-        app:layout_constraintStart_toStartOf="@+id/btSearch"
+        app:layout_constraintEnd_toEndOf="@+id/btSearch"
         app:layout_constraintTop_toTopOf="@+id/btSearch"
         app:srcCompat="@drawable/ic_search" />
 
     <EditText
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="40dp"
         android:hint="Buscar"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/btSearch"
-        app:layout_constraintStart_toEndOf="@+id/icon_search"
+        app:layout_constraintStart_toStartOf="@+id/btSearch"
         app:layout_constraintTop_toTopOf="@+id/btSearch" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -47,40 +47,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.24" />
 
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Titulo"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/icon_search" />
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Autor"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/icon_search" />
 
     <CheckBox
         android:id="@+id/checkBox7"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="5dp"
         android:text="Disponibilidad"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/icon_search" />
 
     <androidx.constraintlayout.widget.Guideline
