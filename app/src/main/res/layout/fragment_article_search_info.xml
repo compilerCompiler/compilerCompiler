@@ -54,12 +54,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="56dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
             android:text="@{articleInfo.titulo}"
-            tools:text="Título"
             android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightArticleInfo"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imgBookPhotoArInfo"
-            app:layout_constraintTop_toTopOf="@+id/imgFontArticleSearchInfo" />
+            app:layout_constraintTop_toTopOf="@+id/imgFontArticleSearchInfo"
+            tools:text="Título" />
 
         <TextView
             android:id="@+id/txAutorArInfo"
@@ -67,11 +73,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
             android:text="@{articleInfo.autor}"
-            tools:text="Autor"
             android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightArticleInfo"
+            app:layout_constraintHorizontal_bias="0.007"
             app:layout_constraintStart_toEndOf="@+id/imgBookPhotoArInfo"
-            app:layout_constraintTop_toBottomOf="@+id/txTituloArInfo" />
+            app:layout_constraintTop_toBottomOf="@+id/txTituloArInfo"
+            tools:text="Autor" />
 
         <TextView
             android:id="@+id/txDisponibleTextArInfo"

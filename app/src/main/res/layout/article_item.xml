@@ -29,23 +29,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
             android:text="@{libro.titulo}"
-            tools:text="Título"
             android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imgArticulo"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Título" />
 
         <TextView
             android:id="@+id/txAutor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
             android:text="@{libro.autor}"
-            tools:text="Autor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imgArticulo"
-            app:layout_constraintTop_toBottomOf="@+id/txTitulo" />
+            app:layout_constraintTop_toBottomOf="@+id/txTitulo"
+            tools:text="Autor" />
 
         <TextView
             android:id="@+id/txDisponibilidad"
@@ -57,7 +69,8 @@
             android:text="Disponibilidad: "
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imgArticulo"
-            app:layout_constraintTop_toBottomOf="@+id/txAutor" />
+            app:layout_constraintTop_toBottomOf="@+id/txAutor"
+            />
 
         <TextView
             android:id="@+id/txDisponible"
