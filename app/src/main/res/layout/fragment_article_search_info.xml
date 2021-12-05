@@ -51,14 +51,12 @@
 
         <TextView
             android:id="@+id/txTituloArInfo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="40dp"
             android:layout_marginTop="56dp"
-            android:ellipsize="marquee"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:singleLine="true"
             android:text="@{articleInfo.titulo}"
             android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/guidelineRightArticleInfo"
@@ -69,9 +67,11 @@
 
         <TextView
             android:id="@+id/txAutorArInfo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="40dp"
             android:layout_marginTop="20dp"
             android:ellipsize="marquee"
             android:focusable="true"
