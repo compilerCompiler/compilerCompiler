@@ -1,6 +1,7 @@
 package com.upb.vlibrary
 
 import android.app.Application
+import androidx.room.Room
 import com.upb.vlibrary.data.user.UserRepository
 import com.upb.vlibrary.data.user.network.UserNetworkController
 import com.upb.vlibrary.data.user.network.UserNetworkControllerImp
@@ -19,7 +20,7 @@ class App:Application() {
     }
     override fun onCreate() {
         super.onCreate()
-        //db= Room.databaseBuilder(this,AppDatabase::class.java,"app-db").build()
+        db= Room.databaseBuilder(this,AppDatabase::class.java,"app-db").build()
 
 
         startKoin{

@@ -60,7 +60,11 @@
         android:id="@+id/articleSearchFragment"
         android:name="com.upb.vlibrary.ArticleSearchFragment"
         android:label="ArticleSearchFragment"
-        tools:layout="@layout/fragment_articles_search"/>
+        tools:layout="@layout/fragment_articles_search">
+        <action
+            android:id="@+id/action_articleSearchFragment_to_articleSearchInfoFragment"
+            app:destination="@id/articleSearchInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuAdminFragment"
         android:name="com.upb.vlibrary.MenuAdminFragment"
@@ -159,4 +163,13 @@
         android:name="com.upb.vlibrary.ContactFragment"
         android:label="ContactFragment"
         tools:layout="@layout/fragment_contact"/>
+    <fragment
+        android:id="@+id/articleSearchInfoFragment"
+        android:name="com.upb.vlibrary.ArticleSearchInfoFragment"
+        android:label="ArticleSearchInfoFragment"
+        tools:layout="@layout/fragment_article_search_info">
+        <argument
+            android:name="infoBook"
+            app:argType="com.upb.vlibrary.Books" />
+    </fragment>
 </navigation>

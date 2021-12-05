@@ -25,7 +25,7 @@ class MenuUserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.btBusqueda.setOnClickListener {
             val goToSearchPage =
-                MenuUserFragmentDirections.actionMenuUserFragmentToMultimediaMainFragment()
+                MenuUserFragmentDirections.actionMenuUserFragmentToArticleSearchFragment()
             findNavController().navigate(goToSearchPage)
         }
         binding.btMultimedia.setOnClickListener {
