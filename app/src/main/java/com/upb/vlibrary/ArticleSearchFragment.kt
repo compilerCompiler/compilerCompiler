@@ -42,5 +42,13 @@ class ArticleSearchFragment:Fragment() {
         articleSearchViewModel.libros.observe(viewLifecycleOwner){
             articleSearchAdapter.addAll(it)
         }
+
+        binding.iconSearch.setOnClickListener {
+            articleSearchViewModel.updateSelectedBooks(binding.txTextoBusqueda.text.toString())
+            articleSearchViewModel.libros.observe(viewLifecycleOwner){
+                articleSearchAdapter.addAll(it)
+            }
+        }
+
     }
 }

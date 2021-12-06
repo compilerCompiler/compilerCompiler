@@ -18,4 +18,8 @@ class ArticlePersistencyControllerImp:ArticlePersistencyController {
         return db.articleDao().filterBooksByDisponibility(disponibilidadCheck)
     }
 
+    override fun getAllSelectedBooks(titulo: String, autor: String): List<Books> {
+        return db.articleDao().getSelectedBooks(titulo)
+    }
+
 }

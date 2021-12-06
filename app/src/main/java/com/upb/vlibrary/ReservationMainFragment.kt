@@ -41,5 +41,12 @@ class ReservationMainFragment: Fragment() {
             articleToReserveAdapter.addAll(it)
         }
 
+        binding.iconSearch2.setOnClickListener {
+            articleSearchViewModel.updateSelectedBooks(binding.txTextoBusquedaReserva.text.toString())
+            articleSearchViewModel.libros.observe(viewLifecycleOwner){
+                articleToReserveAdapter.addAll(it)
+            }
+
+        }
     }
 }
