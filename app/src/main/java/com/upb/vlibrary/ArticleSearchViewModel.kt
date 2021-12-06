@@ -20,4 +20,10 @@ class ArticleSearchViewModel:ViewModel() {
             libros.postValue(it)
         }.launchIn(CoroutineScope(Dispatchers.IO))
     }
+
+    fun updateSelectedBooks(query:String){
+        articleRepository.getSelectedBooks(query,query).onEach {
+            libros.postValue(it)
+        }.launchIn(CoroutineScope(Dispatchers.IO))
+    }
 }

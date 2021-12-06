@@ -26,4 +26,17 @@ class ArticleRepository(
         }
     }
 
+    fun getSelectedBooks(titulo:String,autor:String):Flow<List<Books>>{
+        return flow {
+            val tituloPersistency ="\'%${titulo}%\'"
+            emit(persistency.getAllSelectedBooks(titulo,titulo))
+            try{
+                val libros = network.getSelectionBooks(titulo,autor)
+                persistency.saveBooks(libros)
+                emit(libros)
+            }catch(e:Exception){
+                Log.e("ERROR",e.message!!)
+            }
+        }
+    }
 }

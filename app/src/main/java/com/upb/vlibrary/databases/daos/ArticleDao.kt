@@ -17,4 +17,7 @@ interface ArticleDao {
 
     @Query("SELECT * FROM books WHERE Reservado LIKE :query ")
     fun filterBooksByDisponibility(query: Boolean):List<Books>
+
+    @Query("SELECT * FROM books WHERE Titulo LIKE '%' || :query || '%'  OR Autor LIKE '%' || :query || '%'")
+    fun getSelectedBooks(query: String):List<Books>
 }
