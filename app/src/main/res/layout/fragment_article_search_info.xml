@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="articleInfo"
+            type="com.upb.vlibrary.Books" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/AzulClaroModoNoche">
+
+        <ImageView
+            android:id="@+id/imgFontArticleSearchInfo"
+            android:layout_width="0dp"
+            android:layout_height="600dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRightArticleInfo"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeftArticleInfo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_background" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeftArticleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRightArticleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <ImageView
+            android:id="@+id/imgBookPhotoArInfo"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            app:srcUrl="@{articleInfo.foto_url}"
+            app:layout_constraintStart_toStartOf="@+id/imgFontArticleSearchInfo"
+            app:layout_constraintTop_toTopOf="@+id/imgFontArticleSearchInfo"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txTituloArInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="56dp"
+            android:text="@{articleInfo.titulo}"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightArticleInfo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imgBookPhotoArInfo"
+            app:layout_constraintTop_toTopOf="@+id/imgFontArticleSearchInfo"
+            tools:text="Título" />
+
+        <TextView
+            android:id="@+id/txAutorArInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="200dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@{articleInfo.autor}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightArticleInfo"
+            app:layout_constraintHorizontal_bias="0.007"
+            app:layout_constraintStart_toEndOf="@+id/imgBookPhotoArInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txTituloArInfo"
+            tools:text="Autor" />
+
+        <TextView
+            android:id="@+id/txDisponibleTextArInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Reservado: "
+            app:layout_constraintStart_toEndOf="@+id/imgBookPhotoArInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txAutorArInfo" />
+
+        <TextView
+            android:id="@+id/txSinopsisArInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Sinopsis: "
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeftArticleInfo"
+            app:layout_constraintTop_toBottomOf="@+id/imgBookPhotoArInfo" />
+
+        <TextView
+            android:id="@+id/txDisponibilidadArInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@{String.valueOf(articleInfo.reservado)}"
+            tools:text="X"
+            app:layout_constraintStart_toEndOf="@+id/txDisponibleTextArInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txAutorArInfo" />
+
+        <TextView
+            android:id="@+id/txSinopsisTextArInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@{articleInfo.sinopsis}"
+            app:layout_constraintEnd_toEndOf="@id/imgFontArticleSearchInfo"
+            app:layout_constraintStart_toStartOf="@+id/imgFontArticleSearchInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txSinopsisArInfo"
+            tools:text="It is a natural attraction of great beauty, whose main authors are the water and the wind which, through their erosive effects on the terrain, created capricious cone and crater formations that resemble a lunar landscape. In the mountains around La Paz, clay contains different minerals that give them varied colors, going from whitish to purple with the most common brown and reddish." />
+
+        <ImageView
+            android:id="@+id/imgButtonReservarAsInfo"
+            android:layout_height="60dp"
+            android:layout_width="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFontArticleSearchInfo"
+            app:layout_constraintEnd_toEndOf="@+id/imgFontArticleSearchInfo"
+            app:layout_constraintStart_toStartOf="@+id/imgFontArticleSearchInfo"
+            app:srcCompat="@drawable/button_background_2" />
+
+        <TextView
+            android:id="@+id/txButtonReservarArInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservar"
+            android:textColor="@color/blanco"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgButtonReservarAsInfo"
+            app:layout_constraintEnd_toEndOf="@+id/imgButtonReservarAsInfo"
+            app:layout_constraintStart_toStartOf="@+id/imgButtonReservarAsInfo"
+            app:layout_constraintTop_toTopOf="@+id/imgButtonReservarAsInfo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

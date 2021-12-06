@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgConfirmarReservation"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
@@ -47,9 +47,9 @@
         android:text="Volver al menu principal"
         android:textColor="@color/blanco"
         android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintEnd_toEndOf="@+id/imgConfirmarReservation"
+        app:layout_constraintStart_toStartOf="@+id/imgConfirmarReservation"
+        app:layout_constraintTop_toTopOf="@+id/imgConfirmarReservation" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeftSuccess"
