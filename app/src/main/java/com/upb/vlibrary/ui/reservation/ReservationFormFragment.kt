@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.reservation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.upb.vlibrary.Books
 import com.upb.vlibrary.databases.daos.ReservationViewModel
 import com.upb.vlibrary.databinding.FragmentReservationDetailsBinding
 import kotlinx.coroutines.CoroutineScope
@@ -16,7 +17,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import org.koin.android.ext.android.bind
 
 class ReservationFormFragment: Fragment() {
 

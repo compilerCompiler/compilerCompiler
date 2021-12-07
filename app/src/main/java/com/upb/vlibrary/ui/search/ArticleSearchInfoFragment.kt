@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.upb.vlibrary.Books
 import com.upb.vlibrary.databinding.FragmentArticleSearchInfoBinding
 
 class ArticleSearchInfoFragment: Fragment() {

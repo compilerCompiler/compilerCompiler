@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.Extras
 
 import android.app.Application
 import androidx.room.Room
@@ -20,7 +20,7 @@ class App:Application() {
     }
     override fun onCreate() {
         super.onCreate()
-        db= Room.databaseBuilder(this,AppDatabase::class.java,"app-db").build()
+        db = Room.databaseBuilder(this, AppDatabase::class.java,"app-db").build()
 
 
         startKoin{

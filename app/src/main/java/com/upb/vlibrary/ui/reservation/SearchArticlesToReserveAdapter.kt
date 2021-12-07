@@ -4,13 +4,11 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.upb.vlibrary.databinding.ArticleItemBinding
-import com.upb.vlibrary.databinding.FragmentArticleSearchInfoBinding
 import com.upb.vlibrary.databinding.ReservationItemBinding
 
 class SearchArticlesToReserveAdapter:RecyclerView.Adapter<SearchArticlesToReserveListViewHolder>(){
     private val librosList: MutableList<Books> = mutableListOf()
-    private var onLibroItemClickListener:((libros:Books)-> Unit)? =null
+    private var onLibroItemClickListener:((libros: Books)-> Unit)? =null
 
     @SuppressLint("NotifyDataSetChanged")
     fun addAll(newElementList: List<Books>) {
@@ -35,14 +33,14 @@ class SearchArticlesToReserveAdapter:RecyclerView.Adapter<SearchArticlesToReserv
         return librosList.size
     }
 
-    fun setOnLibroClickListener(onLibroItemClickListener:((libros:Books)->Unit)?){
+    fun setOnLibroClickListener(onLibroItemClickListener:((libros: Books)->Unit)?){
         this.onLibroItemClickListener=onLibroItemClickListener
     }
 
 }
 
 class SearchArticlesToReserveListViewHolder(val binding: ReservationItemBinding): RecyclerView.ViewHolder(binding.root){
-    fun bind(libros:Books){
+    fun bind(libros: Books){
         binding.libroToReserve=libros
     }
 }

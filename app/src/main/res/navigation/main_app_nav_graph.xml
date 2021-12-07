@@ -6,7 +6,7 @@
     app:startDestination="@id/optionsLoginfragment">
     <fragment
         android:id="@+id/optionsLoginfragment"
-        android:name="com.upb.vlibrary.OptionsLoginfragment"
+        android:name="com.upb.vlibrary.ui.login.OptionsLoginfragment"
         android:label="OptionsLoginfragment"
         tools:layout="@layout/fragment_login_options">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.upb.vlibrary.RegisterFragment"
+        android:name="com.upb.vlibrary.ui.register.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.upb.vlibrary.LoginFragment"
+        android:name="com.upb.vlibrary.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -48,17 +48,17 @@
     </fragment>
     <fragment
         android:id="@+id/errorFragment"
-        android:name="com.upb.vlibrary.ErrorFragment"
+        android:name="com.upb.vlibrary.ui.login.ErrorFragment"
         android:label="ErrorFragment"
         tools:layout="@layout/fragment_error"/>
     <fragment
         android:id="@+id/adminFragment"
-        android:name="com.upb.vlibrary.AdminFragment"
+        android:name="com.upb.vlibrary.ui.menuAdmi.AdminFragment"
         android:label="AdminFragment"
         tools:layout="@layout/fragment_admin"/>
     <fragment
         android:id="@+id/articleSearchFragment"
-        android:name="com.upb.vlibrary.ArticleSearchFragment"
+        android:name="com.upb.vlibrary.ui.search.ArticleSearchFragment"
         android:label="ArticleSearchFragment"
         tools:layout="@layout/fragment_articles_search">
         <action
@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/menuAdminFragment"
-        android:name="com.upb.vlibrary.MenuAdminFragment"
+        android:name="com.upb.vlibrary.ui.menuAdmi.MenuAdminFragment"
         android:label="fragment_menu_admin"
         tools:layout="@layout/fragment_menu_admin">
         <action
@@ -100,7 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/menuUserFragment"
-        android:name="com.upb.vlibrary.MenuUserFragment"
+        android:name="com.upb.vlibrary.ui.menuUser.MenuUserFragment"
         android:label="fragment_menu_user"
         tools:layout="@layout/fragment_menu_user" >
         <action
@@ -124,7 +124,7 @@
     </fragment>
     <fragment
         android:id="@+id/multimediaMainFragment"
-        android:name="com.upb.vlibrary.MultimediaMainFragment"
+        android:name="com.upb.vlibrary.ui.multimedia.MultimediaMainFragment"
         android:label="MultimediaMainFragment"
         tools:layout="@layout/fragment_multimedia_main">
         <action
@@ -133,12 +133,12 @@
     </fragment>
     <fragment
         android:id="@+id/multimediaPageFragment"
-        android:name="com.upb.vlibrary.MultimediaPageFragment"
+        android:name="com.upb.vlibrary.ui.multimedia.MultimediaPageFragment"
         android:label="MultimediaPageFragment"
         tools:layout="@layout/fragment_multimedia_page"/>
     <fragment
         android:id="@+id/reservationMainFragment"
-        android:name="com.upb.vlibrary.ReservationMainFragment"
+        android:name="com.upb.vlibrary.ui.reservation.ReservationMainFragment"
         android:label="ReservationMainFragment"
         tools:layout="@layout/fragment_reservation_main">
         <action
@@ -153,7 +153,7 @@
     </fragment>
     <fragment
         android:id="@+id/reservationFormFragment"
-        android:name="com.upb.vlibrary.ReservationFormFragment"
+        android:name="com.upb.vlibrary.ui.reservation.ReservationFormFragment"
         android:label="ReservationFormFragment"
         tools:layout="@layout/fragment_reservation_details">
         <action
@@ -171,7 +171,7 @@
     </fragment>
     <fragment
         android:id="@+id/reservationSuccessFragment"
-        android:name="com.upb.vlibrary.ReservationSuccessFragment"
+        android:name="com.upb.vlibrary.ui.reservation.ReservationSuccessFragment"
         android:label="ReservationSuccessFragment"
         tools:layout="@layout/fragment_reservation_success">
         <action
@@ -186,7 +186,7 @@
     </fragment>
     <fragment
         android:id="@+id/supportFragment"
-        android:name="com.upb.vlibrary.SupportFragment"
+        android:name="com.upb.vlibrary.ui.helpContact.SupportFragment"
         android:label="SupportFragment"
         tools:layout="@layout/fragment_support">
         <action
@@ -198,17 +198,17 @@
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
-        android:name="com.upb.vlibrary.HelpFragment"
+        android:name="com.upb.vlibrary.ui.helpContact.HelpFragment"
         android:label="HelpFragment"
         tools:layout="@layout/fragment_help"/>
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.upb.vlibrary.ContactFragment"
+        android:name="com.upb.vlibrary.ui.helpContact.ContactFragment"
         android:label="ContactFragment"
         tools:layout="@layout/fragment_contact"/>
     <fragment
         android:id="@+id/articleSearchInfoFragment"
-        android:name="com.upb.vlibrary.ArticleSearchInfoFragment"
+        android:name="com.upb.vlibrary.ui.search.ArticleSearchInfoFragment"
         android:label="ArticleSearchInfoFragment"
         tools:layout="@layout/fragment_article_search_info">
         <argument

@@ -8,7 +8,7 @@ import com.upb.vlibrary.databinding.ArticleItemBinding
 
 class SearchArticlesAdapter:RecyclerView.Adapter<SearchArticlesListViewHolder>(){
     private val librosList: MutableList<Books> = mutableListOf()
-    private var onLibroItemClickListener:((libros:Books)-> Unit)? =null
+    private var onLibroItemClickListener:((libros: Books)-> Unit)? =null
 
 
     @SuppressLint("NotifyDataSetChanged")
@@ -34,7 +34,7 @@ class SearchArticlesAdapter:RecyclerView.Adapter<SearchArticlesListViewHolder>()
         return librosList.size
     }
 
-    fun setOnLibroClickListener(onLibroItemClickListener:((libros:Books)->Unit)?){
+    fun setOnLibroClickListener(onLibroItemClickListener:((libros: Books)->Unit)?){
         this.onLibroItemClickListener=onLibroItemClickListener
     }
 }

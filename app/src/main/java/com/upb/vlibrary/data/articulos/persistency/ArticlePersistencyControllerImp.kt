@@ -1,6 +1,6 @@
 package com.upb.vlibrary.data.articulos.persistency
 
-import com.upb.vlibrary.App
+import com.upb.vlibrary.ui.Extras.App
 import com.upb.vlibrary.Books
 
 class ArticlePersistencyControllerImp:ArticlePersistencyController {

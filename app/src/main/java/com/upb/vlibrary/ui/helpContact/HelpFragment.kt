@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.helpContact
 
 
 import android.os.Bundle
@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.upb.vlibrary.databinding.FragmentContactBinding
+import com.upb.vlibrary.databinding.FragmentHelpBinding
 
 
-class ContactFragment : Fragment() {
+class HelpFragment : Fragment() {
 
-    private lateinit var binding:FragmentContactBinding
+    private lateinit var binding: FragmentHelpBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentContactBinding.inflate(inflater,container,false)
+        binding= FragmentHelpBinding.inflate(inflater,container,false)
         return binding.root
     }
 

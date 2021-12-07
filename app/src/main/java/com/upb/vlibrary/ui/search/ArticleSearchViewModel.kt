@@ -1,7 +1,8 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.search
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.upb.vlibrary.Books
 import com.upb.vlibrary.data.articulos.ArticleRepository
 import com.upb.vlibrary.data.articulos.network.ArticleNetworkControllerImp
 import com.upb.vlibrary.data.articulos.persistency.ArticlePersistencyControllerImp

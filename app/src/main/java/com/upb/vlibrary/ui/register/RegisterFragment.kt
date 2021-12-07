@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,7 +19,7 @@ class RegisterFragment:Fragment() {
 
 
     private lateinit var binding:FragmentRegisterBinding
-    private val registerViewModel:RegisterViewModel by viewModels()
+    private val registerViewModel: RegisterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,7 +36,6 @@ class RegisterFragment:Fragment() {
             val email=binding.userEmail.text.toString()
             val password=binding.userPassword.text.toString()
             registerViewModel.register(username,email,password).onEach{
-                Toast.makeText(context,it.toString(),Toast.LENGTH_SHORT).show()
                 val goToMainAdmiMenu= RegisterFragmentDirections.actionRegisterFragmentToMenuAdminFragment(username,password)
                 findNavController().navigate(goToMainAdmiMenu)
             }.catch {

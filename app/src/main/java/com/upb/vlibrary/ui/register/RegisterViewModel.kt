@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.register
 
 import androidx.lifecycle.ViewModel
 import com.upb.vlibrary.data.user.UserRepository

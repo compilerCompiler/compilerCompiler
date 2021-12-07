@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.reservation
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,7 +1,8 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.Extras
 
 
 import android.content.Context
+import com.upb.vlibrary.isNetworkConnected
 
 object NetworkUtils {
     var isOnline = false

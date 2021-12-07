@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.multimedia
 
 import android.os.Bundle
 import android.view.LayoutInflater

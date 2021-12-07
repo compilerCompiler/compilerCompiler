@@ -1,22 +1,21 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.upb.vlibrary.databinding.FragmentAdminBinding
-import com.upb.vlibrary.databinding.FragmentMultimediaMainBinding
+import com.upb.vlibrary.databinding.FragmentErrorBinding
 
-class MultimediaMainFragment: Fragment() {
+class ErrorFragment: Fragment()  {
 
-   private lateinit var binding: FragmentMultimediaMainBinding
+    private lateinit var binding: FragmentErrorBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentMultimediaMainBinding.inflate(inflater,container,false)
+        binding= FragmentErrorBinding.inflate(inflater,container,false)
         return binding.root
     }
 

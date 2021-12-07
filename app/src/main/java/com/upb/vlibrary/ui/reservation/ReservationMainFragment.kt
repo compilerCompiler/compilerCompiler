@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.reservation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
+import com.upb.vlibrary.SearchArticlesToReserveAdapter
 import com.upb.vlibrary.databinding.FragmentReservationMainBinding
+import com.upb.vlibrary.ui.search.ArticleSearchViewModel
 
 class ReservationMainFragment: Fragment() {
 
