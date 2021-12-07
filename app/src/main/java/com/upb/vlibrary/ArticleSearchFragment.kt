@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.upb.vlibrary.databinding.FragmentArticlesSearchBinding
 
 class ArticleSearchFragment:Fragment() {
 
+    private lateinit var username:String
+    private lateinit var password:String
+    private val args:ArticleSearchFragmentArgs by navArgs()
     private val articleSearchAdapter = SearchArticlesAdapter()
     private lateinit var binding: FragmentArticlesSearchBinding
     private val articleSearchViewModel: ArticleSearchViewModel by viewModels()
@@ -27,6 +31,8 @@ class ArticleSearchFragment:Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        username=args.username
+        password=args.password
         articleSearchViewModel.updateListBooks()
 
         binding.rvArticleSearch.adapter= articleSearchAdapter
@@ -35,7 +41,7 @@ class ArticleSearchFragment:Fragment() {
         LinearSnapHelper().attachToRecyclerView(binding.rvArticleSearch)
 
         articleSearchAdapter.setOnLibroClickListener {
-            val directions= ArticleSearchFragmentDirections.actionArticleSearchFragmentToArticleSearchInfoFragment(it)
+            val directions= ArticleSearchFragmentDirections.actionArticleSearchFragmentToArticleSearchInfoFragment(it,username,password)
             findNavController().navigate(directions)
         }
 

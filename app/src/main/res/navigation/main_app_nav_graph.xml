@@ -64,6 +64,12 @@
         <action
             android:id="@+id/action_articleSearchFragment_to_articleSearchInfoFragment"
             app:destination="@id/articleSearchInfoFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/menuAdminFragment"
@@ -85,6 +91,12 @@
         <action
             android:id="@+id/action_menuAdminFragment_to_supportFragment"
             app:destination="@id/supportFragment" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/menuUserFragment"
@@ -103,6 +115,12 @@
         <action
             android:id="@+id/action_menuUserFragment_to_supportFragment"
             app:destination="@id/supportFragment" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/multimediaMainFragment"
@@ -126,6 +144,12 @@
         <action
             android:id="@+id/action_reservationMainFragment_to_reservationFormFragment"
             app:destination="@id/reservationFormFragment" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/reservationFormFragment"
@@ -138,12 +162,28 @@
         <argument
             android:name="bookInfo"
             app:argType="com.upb.vlibrary.Books" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/reservationSuccessFragment"
         android:name="com.upb.vlibrary.ReservationSuccessFragment"
         android:label="ReservationSuccessFragment"
-        tools:layout="@layout/fragment_reservation_success"/>
+        tools:layout="@layout/fragment_reservation_success">
+        <action
+            android:id="@+id/action_reservationSuccessFragment_to_menuUserFragment"
+            app:destination="@id/menuUserFragment" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/supportFragment"
         android:name="com.upb.vlibrary.SupportFragment"
@@ -177,5 +217,11 @@
         <action
             android:id="@+id/action_articleSearchInfoFragment_to_reservationFormFragment"
             app:destination="@id/reservationFormFragment" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
 </navigation>
