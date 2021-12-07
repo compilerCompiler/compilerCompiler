@@ -16,4 +16,9 @@ class UserRepository(val network: UserNetworkController) {
             emit(network.register(username,email,password))
         }
     }
+    fun reservation(id_usuario:Int,id_libro:Int,fecha_reservacion:String,fecha_devolucion:String):Flow<Any>{
+        return flow {
+            emit(network.reservation(id_usuario,id_libro,fecha_reservacion,fecha_devolucion))
+        }
+    }
 }

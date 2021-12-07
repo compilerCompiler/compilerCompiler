@@ -37,13 +37,11 @@ class LoginFragment:Fragment() {
 
             loginViewModel.login(username,password).onEach {
                 Toast.makeText(context,"Credenciales correctas", Toast.LENGTH_SHORT).show()
-                val goToMainMenu = LoginFragmentDirections.actionLoginFragmentToMenuUserFragment()
+                val goToMainMenu = LoginFragmentDirections.actionLoginFragmentToMenuUserFragment(username,password)
                 findNavController().navigate(goToMainMenu)
             }.catch {
                 Toast.makeText(context,"Usuario o password incorrecto", Toast.LENGTH_SHORT).show()
             }.launchIn(CoroutineScope(Dispatchers.Main))
-
-
-         }
+        }
         }
     }

@@ -7,11 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.upb.vlibrary.databinding.FragmentMenuAdminBinding
 
 
 class MenuAdminFragment : Fragment() {
 
+    private lateinit var username:String
+    private lateinit var password:String
+    private val args: MenuAdminFragmentArgs by navArgs()
     private lateinit var binding:FragmentMenuAdminBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,8 +27,10 @@ class MenuAdminFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        username=args.userName
+        password=args.password
             binding.btReserva.setOnClickListener {
-                val goToReservationPage= MenuAdminFragmentDirections.actionMenuAdminFragmentToReservationMainFragment()
+                val goToReservationPage= MenuAdminFragmentDirections.actionMenuAdminFragmentToReservationMainFragment(username,password)
                 findNavController().navigate(goToReservationPage)
             }
             binding.btAyuda.setOnClickListener {
@@ -32,7 +38,7 @@ class MenuAdminFragment : Fragment() {
                 findNavController().navigate(goToHelpPage)
             }
             binding.btBusqueda.setOnClickListener {
-                val goToSearchPage=MenuAdminFragmentDirections.actionMenuAdminFragmentToArticleSearchFragment()
+                val goToSearchPage=MenuAdminFragmentDirections.actionMenuAdminFragmentToArticleSearchFragment(username,password)
                 findNavController().navigate(goToSearchPage)
             }
             binding.btMultimedia.setOnClickListener {
