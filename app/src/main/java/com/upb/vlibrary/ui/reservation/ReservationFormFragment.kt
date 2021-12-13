@@ -10,7 +10,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.upb.vlibrary.Books
-import com.upb.vlibrary.databases.daos.ReservationViewModel
 import com.upb.vlibrary.databinding.FragmentReservationDetailsBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -45,7 +44,7 @@ class ReservationFormFragment: Fragment() {
             if(password == binding.edtxPassword.text.toString()){
                 val fechaReserva = binding.edtxReservationDate.text.toString()
                 val fechaDevolucion =binding.edtxFechaDevolucion.text.toString()
-                reservationViewModel.reservation(18,libro.Id_libro,fechaReserva,fechaDevolucion).onEach {
+                reservationViewModel.reservation(17,libro.Id_libro,fechaReserva,fechaDevolucion).onEach {
                     val goToSuccessPage= ReservationFormFragmentDirections.actionReservationFormFragmentToReservationSuccessFragment(username,password)
                     findNavController().navigate(goToSuccessPage)
                 }.catch {
