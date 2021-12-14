@@ -1,8 +1,8 @@
 package com.upb.vlibrary.data.user.network
 
-import com.upb.vlibrary.data.user.network.model.LoginRequest
-import com.upb.vlibrary.data.user.network.model.RegisterRequest
-import com.upb.vlibrary.data.user.network.model.ReservationRequest
+import com.upb.vlibrary.UserInfo
+import com.upb.vlibrary.UserRegistered
+import com.upb.vlibrary.data.user.network.model.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -13,17 +13,23 @@ class UserNetworkControllerImp:UserNetworkController {
         .build()
         .create(UserAPI::class.java)
 
-
-
-    override suspend fun login(nombre_usuario: String, password: String) {
+    override suspend fun login(nombre_usuario: String, password: String):UserInfo {
         return client.login(LoginRequest(nombre_usuario,password))
     }
 
-    override suspend fun register(nombre_usuario: String, correo: String, password: String) {
+    override suspend fun register(nombre_usuario: String, correo: String, password: String):UserRegistered {
         return client.register(RegisterRequest(nombre_usuario,correo,password))
     }
 
     override suspend fun reservation(id_usuario: Int, id_libro: Int, fecha_reservacion: String, fecha_devolucion: String) {
         return client.reservacion(ReservationRequest(id_usuario,id_libro,fecha_reservacion,fecha_devolucion))
+    }
+
+    override suspend fun createPersona(nombre: String, profesion: String, id_usuario: Int) {
+        return client.createPersona(PersonaRequest(nombre,profesion,id_usuario))
+    }
+
+    override suspend fun createAdmi(id_persona: Int, codigo_admi: Int) {
+        return client.createAdmi(AdmiRequest(id_persona,codigo_admi))
     }
 }
