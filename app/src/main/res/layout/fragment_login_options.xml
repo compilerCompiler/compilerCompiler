@@ -9,43 +9,55 @@
 
     <Button
         android:id="@+id/button_register"
-        android:textSize="25dp"
         android:layout_width="175dp"
         android:layout_height="116dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="@color/AzulClaro"
         android:text="@string/register"
+        android:textSize="25dp"
         app:cornerRadius="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txTextoBusquedaReserva"
-
-        />
+        app:layout_constraintTop_toBottomOf="@+id/txTextoBusquedaReserva" />
 
     <Button
         android:id="@+id/button_login"
-        android:textSize="25dp"
         android:layout_width="183dp"
         android:layout_height="105dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="@color/AzulClaro"
         android:text="@string/login"
+
+        android:textSize="25dp"
         app:cornerRadius="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_register" />
+        app:layout_constraintTop_toBottomOf="@+id/button_registerAdmin" />
 
     <TextView
         android:id="@+id/txTextoBusquedaReserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:text="@string/opciones"
         android:textAppearance="@style/VLibrary"
-        app:layout_constraintBottom_toTopOf="@+id/button_register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_registerAdmin"
+        android:layout_width="175dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/AzulClaro"
+        android:text="REGISTER ADMIN"
+        android:textSize="25dp"
+        app:cornerRadius="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
 </androidx.constraintlayout.widget.ConstraintLayout>

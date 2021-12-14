@@ -36,7 +36,7 @@ class RegisterFragment:Fragment() {
             val email=binding.userEmail.text.toString()
             val password=binding.userPassword.text.toString()
             registerViewModel.register(username,email,password).onEach{
-                val goToMainAdmiMenu= RegisterFragmentDirections.actionRegisterFragmentToMenuAdminFragment(username,password)
+                val goToMainAdmiMenu= RegisterFragmentDirections.actionRegisterFragmentToMenuUserFragment(username,password)
                 findNavController().navigate(goToMainAdmiMenu)
             }.catch {
                 Toast.makeText(context,"No se pudo registrar el usuario",Toast.LENGTH_SHORT).show()

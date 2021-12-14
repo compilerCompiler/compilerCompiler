@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_optionsLoginfragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_optionsLoginfragment_to_registerAdminFragment"
+            app:destination="@id/registerAdminFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -27,9 +30,6 @@
         <action
             android:id="@+id/action_registerFragment_to_menuUserFragment"
             app:destination="@id/menuUserFragment" />
-        <action
-            android:id="@+id/action_registerFragment_to_menuAdminFragment"
-            app:destination="@id/menuAdminFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -223,5 +223,14 @@
         <argument
             android:name="password"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerAdminFragment"
+        android:name="com.upb.vlibrary.ui.register.RegisterAdminFragment"
+        android:label="RegisterAdminFragment"
+        tools:layout="@layout/fragment_register_admin">
+        <action
+            android:id="@+id/action_registerAdminFragment_to_menuAdminFragment"
+            app:destination="@id/menuAdminFragment" />
     </fragment>
 </navigation>
