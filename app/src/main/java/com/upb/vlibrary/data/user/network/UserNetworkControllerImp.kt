@@ -3,6 +3,7 @@ package com.upb.vlibrary.data.user.network
 import com.upb.vlibrary.Persona
 import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
+import com.upb.vlibrary.UsuarioPersona
 import com.upb.vlibrary.data.user.network.model.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -32,5 +33,9 @@ class UserNetworkControllerImp:UserNetworkController {
 
     override suspend fun createAdmi(id_persona: Int, codigo_admi: Int) {
         return client.createAdmi(AdmiRequest(id_persona,codigo_admi))
+    }
+
+    override suspend fun getAllUsers(): List<UsuarioPersona> {
+        return client.getAllUsers()
     }
 }

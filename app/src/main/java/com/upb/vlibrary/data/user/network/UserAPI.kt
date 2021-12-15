@@ -3,8 +3,10 @@ package com.upb.vlibrary.data.user.network
 import com.upb.vlibrary.Persona
 import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
+import com.upb.vlibrary.UsuarioPersona
 import com.upb.vlibrary.data.user.network.model.*
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface UserAPI {
@@ -22,4 +24,7 @@ interface UserAPI {
 
     @POST("api/administrador/create")
     suspend fun createAdmi(@Body admiRequest: AdmiRequest)
+
+    @GET("api/personas/findall")
+    suspend fun getAllUsers():List<UsuarioPersona>
 }

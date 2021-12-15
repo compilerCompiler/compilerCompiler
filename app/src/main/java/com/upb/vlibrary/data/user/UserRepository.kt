@@ -3,6 +3,7 @@ package com.upb.vlibrary.data.user
 import com.upb.vlibrary.Persona
 import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
+import com.upb.vlibrary.UsuarioPersona
 import com.upb.vlibrary.data.user.network.UserNetworkController
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -35,6 +36,12 @@ class UserRepository(val network: UserNetworkController) {
     fun createAdmi(id_persona:Int,codigo_admi:Int):Flow<Any>{
         return flow{
             emit(network.createAdmi(id_persona,codigo_admi))
+        }
+    }
+
+    fun getAllUsers():Flow<List<UsuarioPersona>>{
+        return flow{
+            emit(network.getAllUsers())
         }
     }
 

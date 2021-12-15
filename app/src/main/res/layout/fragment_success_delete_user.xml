@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AzulClaroModoNoche">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="242dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_checkmark" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Eliminación exitosa"
+        android:textAlignment="center"
+        android:textColor="@color/blanco"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRightSuccess"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeftSuccess"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgConfirmarEliminacionUser"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRightSuccess"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeftSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/button_background_2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al menu principal"
+        android:textColor="@color/blanco"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgConfirmarEliminacionUser"
+        app:layout_constraintEnd_toEndOf="@+id/imgConfirmarEliminacionUser"
+        app:layout_constraintStart_toStartOf="@+id/imgConfirmarEliminacionUser"
+        app:layout_constraintTop_toTopOf="@+id/imgConfirmarEliminacionUser" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeftSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRightSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

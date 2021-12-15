@@ -55,7 +55,11 @@
         android:id="@+id/adminFragment"
         android:name="com.upb.vlibrary.ui.menuAdmi.AdminFragment"
         android:label="AdminFragment"
-        tools:layout="@layout/fragment_admin"/>
+        tools:layout="@layout/fragment_admin">
+        <action
+            android:id="@+id/action_adminFragment_to_userDetails"
+            app:destination="@id/userDetails" />
+    </fragment>
     <fragment
         android:id="@+id/articleSearchFragment"
         android:name="com.upb.vlibrary.ui.search.ArticleSearchFragment"
@@ -254,4 +258,21 @@
             android:id="@+id/action_registerAdminFragment_to_menuAdminFragment"
             app:destination="@id/menuAdminFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/userDetails"
+        android:name="com.upb.vlibrary.ui.menuAdmi.UserDetails"
+        android:label="UserDetails"
+        tools:layout="@layout/fragment_user_details">
+        <action
+            android:id="@+id/action_userDetails_to_successDeleteUserFragment"
+            app:destination="@id/successDeleteUserFragment" />
+        <argument
+            android:name="userInfo"
+            app:argType="com.upb.vlibrary.UsuarioPersona" />
+    </fragment>
+    <fragment
+        android:id="@+id/successDeleteUserFragment"
+        android:name="com.upb.vlibrary.ui.menuAdmi.SuccessDeleteUserFragment"
+        android:label="SuccessDeleteUserFragment"
+        tools:layout="@layout/fragment_success_delete_user"/>
 </navigation>
