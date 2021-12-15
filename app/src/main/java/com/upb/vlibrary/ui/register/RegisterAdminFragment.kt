@@ -35,6 +35,7 @@ class RegisterAdminFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         var idUsuario: Int
+        var idPersona: Int
         binding.imgAcceptButtonAdminRegister.setOnClickListener {
             val username=binding.edtxNameUserAdmin.text.toString()
             val password=binding.edtxPasswordAdmin.text.toString()
@@ -43,17 +44,26 @@ class RegisterAdminFragment: Fragment() {
             val profesion=binding.edtxProfession.text.toString()
             val codigoAdmin:Int=binding.edtxAdminCode.text.toString().toInt()
             val codigoVerificacion:Int=binding.edtxVerificationCodeAdmin.text.toString().toInt()
-            personaViewModel.createPersona(nombre,profesion,16).launchIn(CoroutineScope(Dispatchers.Main))
-            admiViewModel.createAdmi(1,codigoAdmin).launchIn(CoroutineScope(Dispatchers.Main))
-            registerViewModel.register(username,email,password).onEach {
-                idUsuario = it.id
-                Log.d("Main","Id usuario: $idUsuario")
-                Toast.makeText(context,"Registro exitoso",Toast.LENGTH_SHORT).show()
-                val goToAdmiMenu=RegisterAdminFragmentDirections.actionRegisterAdminFragmentToMenuAdminFragment(username,password,idUsuario)
-                findNavController().navigate(goToAdmiMenu)
-            }.catch {
-                Toast.makeText(context,"No se pudo registrar",Toast.LENGTH_SHORT).show()
-            }.launchIn(CoroutineScope(Dispatchers.Main))
+
+            if(codigoVerificacion == 4545){
+                registerViewModel.register(username,email,password).onEach {
+                    idUsuario = it.id
+                    Log.d("Main","Id usuario: $idUsuario")
+                    Toast.makeText(context,"Registro exitoso",Toast.LENGTH_SHORT).show()
+                    val goToAdmiMenu=RegisterAdminFragmentDirections.actionRegisterAdminFragmentToMenuAdminFragment(username,password,idUsuario)
+                    findNavController().navigate(goToAdmiMenu)
+                    personaViewModel.createPersona(nombre,profesion,idUsuario).onEach {
+                        idPersona = it.id
+                        admiViewModel.createAdmi(idPersona,codigoAdmin).launchIn(CoroutineScope(Dispatchers.Main))
+                    }.launchIn(CoroutineScope(Dispatchers.Main))
+
+                }.catch {
+                    Toast.makeText(context,"No se pudo registrar",Toast.LENGTH_SHORT).show()
+                }.launchIn(CoroutineScope(Dispatchers.Main))
+            }else{
+                Toast.makeText(context,"El codigo de verificacion es incorrecto",Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 }

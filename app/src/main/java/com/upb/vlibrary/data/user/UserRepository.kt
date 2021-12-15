@@ -1,5 +1,6 @@
 package com.upb.vlibrary.data.user
 
+import com.upb.vlibrary.Persona
 import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
 import com.upb.vlibrary.data.user.network.UserNetworkController
@@ -25,7 +26,7 @@ class UserRepository(val network: UserNetworkController) {
         }
     }
 
-    fun createPersona(nombre:String,profesion:String,id_usuario:Int):Flow<Any>{
+    fun createPersona(nombre:String,profesion:String,id_usuario:Int):Flow<Persona>{
         return flow {
             emit(network.createPersona(nombre,profesion,id_usuario))
         }

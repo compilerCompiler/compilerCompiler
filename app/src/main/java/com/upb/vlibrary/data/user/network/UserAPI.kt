@@ -1,5 +1,6 @@
 package com.upb.vlibrary.data.user.network
 
+import com.upb.vlibrary.Persona
 import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
 import com.upb.vlibrary.data.user.network.model.*
@@ -17,7 +18,7 @@ interface UserAPI {
     suspend fun reservacion(@Body reservationRequest: ReservationRequest)
 
     @POST("/api/personas/create")
-    suspend fun createPersona(@Body personaRequest: PersonaRequest)
+    suspend fun createPersona(@Body personaRequest: PersonaRequest):Persona
 
     @POST("api/administrador/create")
     suspend fun createAdmi(@Body admiRequest: AdmiRequest)

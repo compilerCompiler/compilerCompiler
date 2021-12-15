@@ -1,5 +1,6 @@
 package com.upb.vlibrary.data.user.network
 
+import com.upb.vlibrary.Persona
 import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
 import com.upb.vlibrary.data.user.network.model.*
@@ -25,7 +26,7 @@ class UserNetworkControllerImp:UserNetworkController {
         return client.reservacion(ReservationRequest(id_usuario,id_libro,fecha_reservacion,fecha_devolucion))
     }
 
-    override suspend fun createPersona(nombre: String, profesion: String, id_usuario: Int) {
+    override suspend fun createPersona(nombre: String, profesion: String, id_usuario: Int):Persona {
         return client.createPersona(PersonaRequest(nombre,profesion,id_usuario))
     }
 
