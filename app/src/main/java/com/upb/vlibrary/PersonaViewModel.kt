@@ -9,7 +9,7 @@ class PersonaViewModel:ViewModel() {
 
     private val userRepository by KoinJavaComponent.inject(UserRepository::class.java)
 
-    fun createPersona(nombre:String,profesion:String,id_persona:Int): Flow<Any> {
-        return userRepository.createPersona(nombre,profesion,id_persona)
+    fun createPersona(nombre:String,profesion:String,id_usuario:Int): Flow<Any> {
+        return userRepository.createPersona(nombre,profesion,id_usuario)
     }
 }

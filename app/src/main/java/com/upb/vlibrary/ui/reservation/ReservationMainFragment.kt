@@ -14,11 +14,13 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import com.upb.vlibrary.SearchArticlesToReserveAdapter
 import com.upb.vlibrary.databinding.FragmentReservationMainBinding
 import com.upb.vlibrary.ui.search.ArticleSearchViewModel
+import kotlin.properties.Delegates
 
 class ReservationMainFragment: Fragment() {
 
     private lateinit var username:String
     private lateinit var password:String
+    private var idUsuario by Delegates.notNull<Int>()
     private val args:ReservationMainFragmentArgs by navArgs()
     private val articleToReserveAdapter = SearchArticlesToReserveAdapter()
     private lateinit var binding: FragmentReservationMainBinding
@@ -35,6 +37,7 @@ class ReservationMainFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         username=args.userName
         password=args.password
+        idUsuario=args.idUsuario
         articleSearchViewModel.updateListBooks()
         binding.rvReservationList.adapter=articleToReserveAdapter
         val layoutManager= LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
@@ -43,7 +46,7 @@ class ReservationMainFragment: Fragment() {
 
         articleToReserveAdapter.setOnLibroClickListener {
             if(it.Reservado==0){
-                val goToReservationForm= ReservationMainFragmentDirections.actionReservationMainFragmentToReservationFormFragment(it,username,password)
+                val goToReservationForm= ReservationMainFragmentDirections.actionReservationMainFragmentToReservationFormFragment(it,username,password,idUsuario)
                 findNavController().navigate(goToReservationForm)
             }else{
                 Toast.makeText(context,"No se puede reservar este libro",Toast.LENGTH_SHORT).show()

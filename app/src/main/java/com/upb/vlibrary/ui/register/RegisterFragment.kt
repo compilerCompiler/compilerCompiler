@@ -1,6 +1,7 @@
 package com.upb.vlibrary.ui.register
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,14 +32,15 @@ class RegisterFragment:Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        var idUsuario: Int
         binding.buttonNext.setOnClickListener {
             val username=binding.userName.text.toString()
             val email=binding.userEmail.text.toString()
             val password=binding.userPassword.text.toString()
         registerViewModel.register(username,email,password).onEach{
-            val id_usuario = it.id
-            Toast.makeText(context,"User id: ${id_usuario}",Toast.LENGTH_SHORT).show()
-            val goToMainAdmiMenu= RegisterFragmentDirections.actionRegisterFragmentToMenuUserFragment(username,password)
+            idUsuario = it.id
+            Log.d("Main","Id usuario: $idUsuario")
+            val goToMainAdmiMenu= RegisterFragmentDirections.actionRegisterFragmentToMenuUserFragment(username,password,idUsuario)
                 findNavController().navigate(goToMainAdmiMenu)
             }.catch {
                 Toast.makeText(context,"No se pudo registrar el usuario",Toast.LENGTH_SHORT).show()

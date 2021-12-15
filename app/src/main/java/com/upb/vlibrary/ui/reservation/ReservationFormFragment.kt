@@ -16,12 +16,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlin.properties.Delegates
 
 class ReservationFormFragment: Fragment() {
 
     private lateinit var username:String
     private lateinit var password:String
     private lateinit var libro: Books
+    private var idUsuario by Delegates.notNull<Int>()
     private val args: ReservationFormFragmentArgs by navArgs()
     private lateinit var binding: FragmentReservationDetailsBinding
     private val reservationViewModel: ReservationViewModel by viewModels()
@@ -39,13 +41,14 @@ class ReservationFormFragment: Fragment() {
         username=args.userName
         password=args.password
         libro=args.bookInfo
+        idUsuario=args.idUsuario
         binding.librosReserva=libro
         binding.imgConfirmarReservation.setOnClickListener {
             if(password == binding.edtxPassword.text.toString()){
                 val fechaReserva = binding.edtxReservationDate.text.toString()
                 val fechaDevolucion =binding.edtxFechaDevolucion.text.toString()
-                reservationViewModel.reservation(17,libro.Id_libro,fechaReserva,fechaDevolucion).onEach {
-                    val goToSuccessPage= ReservationFormFragmentDirections.actionReservationFormFragmentToReservationSuccessFragment(username,password)
+                reservationViewModel.reservation(idUsuario,libro.Id_libro,fechaReserva,fechaDevolucion).onEach {
+                    val goToSuccessPage= ReservationFormFragmentDirections.actionReservationFormFragmentToReservationSuccessFragment(username,password,idUsuario)
                     findNavController().navigate(goToSuccessPage)
                 }.catch {
                     Toast.makeText(context,"Hubo un error con la reservacion", Toast.LENGTH_SHORT).show()

@@ -1,6 +1,7 @@
 package com.upb.vlibrary.ui.register
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,7 @@ class RegisterAdminFragment: Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        var idUsuario: Int
         binding.imgAcceptButtonAdminRegister.setOnClickListener {
             val username=binding.edtxNameUserAdmin.text.toString()
             val password=binding.edtxPasswordAdmin.text.toString()
@@ -43,12 +45,15 @@ class RegisterAdminFragment: Fragment() {
             val codigoVerificacion:Int=binding.edtxVerificationCodeAdmin.text.toString().toInt()
             personaViewModel.createPersona(nombre,profesion,16).launchIn(CoroutineScope(Dispatchers.Main))
             admiViewModel.createAdmi(1,codigoAdmin).launchIn(CoroutineScope(Dispatchers.Main))
-            /*registerViewModel.register(username,email,password).onEach {
-                val goToAdmiMenu=RegisterAdminFragmentDirections.actionRegisterAdminFragmentToMenuAdminFragment(username,password)
+            registerViewModel.register(username,email,password).onEach {
+                idUsuario = it.id
+                Log.d("Main","Id usuario: $idUsuario")
+                Toast.makeText(context,"Registro exitoso",Toast.LENGTH_SHORT).show()
+                val goToAdmiMenu=RegisterAdminFragmentDirections.actionRegisterAdminFragmentToMenuAdminFragment(username,password,idUsuario)
                 findNavController().navigate(goToAdmiMenu)
             }.catch {
                 Toast.makeText(context,"No se pudo registrar",Toast.LENGTH_SHORT).show()
-            }.launchIn(CoroutineScope(Dispatchers.Main))*/
+            }.launchIn(CoroutineScope(Dispatchers.Main))
         }
     }
 }

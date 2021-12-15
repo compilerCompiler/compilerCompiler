@@ -70,6 +70,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_user"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/menuAdminFragment"
@@ -97,6 +100,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/menuUserFragment"
@@ -121,6 +127,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/multimediaMainFragment"
@@ -150,6 +159,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/reservationFormFragment"
@@ -168,6 +180,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/reservationSuccessFragment"
@@ -183,6 +198,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/supportFragment"
@@ -223,6 +241,9 @@
         <argument
             android:name="password"
             app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/registerAdminFragment"

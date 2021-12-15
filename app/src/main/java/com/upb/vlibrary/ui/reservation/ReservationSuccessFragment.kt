@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.upb.vlibrary.databinding.FragmentReservationSuccessBinding
+import kotlin.properties.Delegates
 
 class ReservationSuccessFragment: Fragment() {
 
     private lateinit var username:String
     private lateinit var password:String
+    private var idUsuario by Delegates.notNull<Int>()
     private val args:ReservationSuccessFragmentArgs by navArgs()
     private lateinit var binding:FragmentReservationSuccessBinding
     override fun onCreateView(
@@ -27,8 +29,9 @@ class ReservationSuccessFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         username=args.userName
         password=args.password
+        idUsuario=args.idUsuario
         binding.imgConfirmarReservation.setOnClickListener {
-            val goToMainMenu= ReservationSuccessFragmentDirections.actionReservationSuccessFragmentToMenuUserFragment(username,password)
+            val goToMainMenu= ReservationSuccessFragmentDirections.actionReservationSuccessFragmentToMenuUserFragment(username,password,idUsuario)
             findNavController().navigate(goToMainMenu)
         }
     }
