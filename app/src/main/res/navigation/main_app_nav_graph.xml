@@ -59,6 +59,14 @@
         <action
             android:id="@+id/action_adminFragment_to_userDetails"
             app:destination="@id/userDetails" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/articleSearchFragment"
@@ -269,10 +277,32 @@
         <argument
             android:name="userInfo"
             app:argType="com.upb.vlibrary.UsuarioPersona" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/successDeleteUserFragment"
         android:name="com.upb.vlibrary.ui.menuAdmi.SuccessDeleteUserFragment"
         android:label="SuccessDeleteUserFragment"
-        tools:layout="@layout/fragment_success_delete_user"/>
+        tools:layout="@layout/fragment_success_delete_user">
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="id_usuario"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_successDeleteUserFragment_to_menuAdminFragment"
+            app:destination="@id/menuAdminFragment" />
+    </fragment>
 </navigation>

@@ -14,4 +14,6 @@ interface UserNetworkController {
     suspend fun createPersona(nombre:String,profesion:String,id_usuario:Int):Persona
     suspend fun createAdmi(id_persona:Int,codigo_admi:Int)
     suspend fun getAllUsers():List<UsuarioPersona>
+    suspend fun deletePersona(id_persona:Int)
+    suspend fun deleteUsuario(id_usuario: Int)
 }

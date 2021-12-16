@@ -38,4 +38,12 @@ class UserNetworkControllerImp:UserNetworkController {
     override suspend fun getAllUsers(): List<UsuarioPersona> {
         return client.getAllUsers()
     }
+
+    override suspend fun deletePersona(id_persona: Int) {
+        return client.deletePersona(id_persona)
+    }
+
+    override suspend fun deleteUsuario(id_usuario: Int) {
+        return client.deleteUsuario(id_usuario)
+    }
 }

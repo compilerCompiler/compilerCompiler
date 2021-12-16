@@ -5,9 +5,7 @@ import com.upb.vlibrary.UserInfo
 import com.upb.vlibrary.UserRegistered
 import com.upb.vlibrary.UsuarioPersona
 import com.upb.vlibrary.data.user.network.model.*
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface UserAPI {
     @POST("/api/user/login")
@@ -27,4 +25,10 @@ interface UserAPI {
 
     @GET("api/personas/findall")
     suspend fun getAllUsers():List<UsuarioPersona>
+
+    @DELETE("api/personas/{id}")
+    suspend fun deletePersona(@Path("id") id_persona:Int)
+
+    @DELETE("api/user/{id}")
+    suspend fun deleteUsuario(@Path("id") id_usuario:Int)
 }

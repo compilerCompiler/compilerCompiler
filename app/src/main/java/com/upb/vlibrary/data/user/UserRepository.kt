@@ -45,5 +45,17 @@ class UserRepository(val network: UserNetworkController) {
         }
     }
 
+    fun deletePersona(id_persona:Int):Flow<Any>{
+        return  flow {
+            emit(network.deletePersona(id_persona))
+        }
+    }
+
+    fun deleteUsuario(id_usuario: Int):Flow<Any>{
+        return flow {
+            emit(network.deleteUsuario(id_usuario))
+        }
+    }
+
 
 }

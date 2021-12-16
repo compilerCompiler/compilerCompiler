@@ -49,7 +49,7 @@ class MenuAdminFragment : Fragment() {
                 findNavController().navigate(goToMultimedia)
             }
             binding.btAdmin.setOnClickListener {
-                val goToUsersPage=MenuAdminFragmentDirections.actionMenuAdminFragmentToAdminFragment()
+                val goToUsersPage=MenuAdminFragmentDirections.actionMenuAdminFragmentToAdminFragment(username,password,idUsuario)
                 findNavController().navigate(goToUsersPage)
             }
 
