@@ -24,6 +24,7 @@ class ArticleSearchFragment:Fragment() {
     private lateinit var binding: FragmentArticlesSearchBinding
     private val articleSearchViewModel: ArticleSearchViewModel by viewModels()
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
