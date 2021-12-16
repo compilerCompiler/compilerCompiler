@@ -30,5 +30,9 @@ class OptionsLoginfragment:Fragment() {
             val goToRegisterPage= OptionsLoginfragmentDirections.actionOptionsLoginfragmentToLoginFragment2()
             findNavController().navigate(goToRegisterPage)
         }
+        binding.buttonRegisterAdmin.setOnClickListener {
+            val goToRegisterAdminPage= OptionsLoginfragmentDirections.actionOptionsLoginfragmentToRegisterAdminFragment()
+            findNavController().navigate(goToRegisterAdminPage)
+        }
     }
 }
