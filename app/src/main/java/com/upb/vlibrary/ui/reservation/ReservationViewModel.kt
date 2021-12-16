@@ -1,4 +1,4 @@
-package com.upb.vlibrary.databases.daos
+package com.upb.vlibrary.ui.reservation
 
 import androidx.lifecycle.ViewModel
 import com.upb.vlibrary.data.user.UserRepository
