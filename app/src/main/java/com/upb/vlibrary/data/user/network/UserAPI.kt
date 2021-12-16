@@ -23,7 +23,7 @@ interface UserAPI {
     @POST("api/administrador/create")
     suspend fun createAdmi(@Body admiRequest: AdmiRequest)
 
-    @GET("api/personas/findall")
+    @GET("api/personas/findAll")
     suspend fun getAllUsers():List<UsuarioPersona>
 
     @DELETE("api/personas/{id}")
@@ -31,4 +31,7 @@ interface UserAPI {
 
     @DELETE("api/user/{id}")
     suspend fun deleteUsuario(@Path("id") id_usuario:Int)
+
+    @GET("api/administrador/{id}")
+    suspend fun getAdmi(@Path("id") id_usuario: Int)
 }

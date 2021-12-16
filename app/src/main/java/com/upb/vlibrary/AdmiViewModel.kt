@@ -12,4 +12,8 @@ class AdmiViewModel:ViewModel() {
     fun createAdmi(id_persona:Int,codigo_admi:Int): Flow<Any> {
         return userRepository.createAdmi(id_persona,codigo_admi)
     }
+
+    fun getAdmi(id_usuario:Int):Flow<Any>{
+        return userRepository.getAdmi(id_usuario)
+    }
 }

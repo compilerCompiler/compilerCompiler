@@ -46,4 +46,8 @@ class UserNetworkControllerImp:UserNetworkController {
     override suspend fun deleteUsuario(id_usuario: Int) {
         return client.deleteUsuario(id_usuario)
     }
+
+    override suspend fun getAdmi(id_usuario: Int) {
+        return client.getAdmi(id_usuario)
+    }
 }

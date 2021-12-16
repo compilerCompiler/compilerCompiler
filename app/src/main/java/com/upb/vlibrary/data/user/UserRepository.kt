@@ -57,5 +57,11 @@ class UserRepository(val network: UserNetworkController) {
         }
     }
 
+    fun getAdmi(id_usuario: Int):Flow<Any>{
+        return flow{
+            emit(network.getAdmi(id_usuario))
+        }
+    }
+
 
 }
