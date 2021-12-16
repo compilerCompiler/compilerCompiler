@@ -156,7 +156,14 @@
         android:id="@+id/multimediaPageFragment"
         android:name="com.upb.vlibrary.ui.multimedia.MultimediaPageFragment"
         android:label="MultimediaPageFragment"
-        tools:layout="@layout/fragment_multimedia_page"/>
+        tools:layout="@layout/fragment_multimedia_page">
+        <action
+            android:id="@+id/action_multimediaPageFragment_to_multimediaMainFragment"
+            app:destination="@id/multimediaMainFragment" />
+        <argument
+            android:name="video"
+            app:argType="com.upb.vlibrary.Video" />
+    </fragment>
     <fragment
         android:id="@+id/reservationMainFragment"
         android:name="com.upb.vlibrary.ui.reservation.ReservationMainFragment"
