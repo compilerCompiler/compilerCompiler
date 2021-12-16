@@ -18,6 +18,33 @@ class ArticleSearchInfoFragment: Fragment() {
     private lateinit var libro: Books
     private val args: ArticleSearchInfoFragmentArgs by navArgs()
     private lateinit var binding: FragmentArticleSearchInfoBinding
+    private val existingBooks = listOf("Estadística descriptiva y probabilidad", "Metodología de la investigación","Historia de Bolivia")
+    private val existingAuthors = listOf("Concepción Valero Franco, Inmaculada Espejo Miranda", "Alcides Arguedas","Stephen Hawking")
+
+    fun validateBookTitle(
+        bookTitle: String
+    ): Boolean {
+        if(bookTitle.isEmpty()) {
+            return false
+        }
+        if(!existingBooks.contains(bookTitle)) {
+            return false
+        }
+        return true
+    }
+    fun validateBookAuthor(
+        bookAuthor: String
+    ): Boolean {
+        if(bookAuthor.isEmpty()) {
+            return false
+        }
+        if(!existingAuthors.contains(bookAuthor)) {
+            return false
+        }
+        return true
+    }
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

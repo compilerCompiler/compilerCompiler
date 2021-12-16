@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.upb.vlibrary.databinding.FragmentRegisterBinding
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
@@ -18,8 +19,48 @@ import kotlinx.coroutines.flow.onEach
 class RegisterFragment:Fragment() {
 
 
-    private lateinit var binding:FragmentRegisterBinding
+    public lateinit var binding:FragmentRegisterBinding
     private val registerViewModel: RegisterViewModel by viewModels()
+    private val existingUsers = listOf("Manuel", "Rodrigo")
+
+
+    fun validateUsernameInput(
+        username: String
+    ): Boolean {
+        if(username.isEmpty()) {
+            return false
+        }
+        if(username in existingUsers) {
+            return false
+        }
+
+        return true
+    }
+
+
+
+    fun validatePasswordInput(
+        password: String
+    ): Boolean {
+        if(password.isEmpty()) {
+            return false
+        }
+        if(password.count { it.isDigit() } < 2) {
+            return false
+        }
+        return true
+    }
+
+    fun validateRegistrationInput(
+        username: Boolean,
+        password: Boolean
+    ): Boolean {
+        if(password || username) {
+            return false
+        }
+        return true
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +76,8 @@ class RegisterFragment:Fragment() {
             val username=binding.userName.text.toString()
             val email=binding.userEmail.text.toString()
             val password=binding.userPassword.text.toString()
+
+
             registerViewModel.register(username,email,password).onEach{
                 val goToMainAdmiMenu= RegisterFragmentDirections.actionRegisterFragmentToMenuAdminFragment(username,password)
                 findNavController().navigate(goToMainAdmiMenu)
