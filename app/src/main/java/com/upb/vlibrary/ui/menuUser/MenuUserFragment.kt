@@ -28,6 +28,8 @@ class MenuUserFragment : Fragment() {
         return binding.root
     }
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         username=args.userName
         password=args.password
