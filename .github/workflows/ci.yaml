@@ -11,8 +11,6 @@ jobs:
     steps: 
       - name: Descargar codigo
         uses: actions/checkout@v2
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
       - name: Correr Unit Test
         run: gradle test
   build:
@@ -21,6 +19,8 @@ jobs:
     steps:
       - name: Descargar codigo
         uses: actions/checkout@v2
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Build the app
         run: ./gradlew assembleDebug
       - name: Upload apk
