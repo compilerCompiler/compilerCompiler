@@ -1,9 +1,9 @@
-name : Script de Prueba
+name : Prueba Unit Tests
 on: [push]
 
 jobs:
   primera:
-    name: Primera tarea
+    name: Unit Tests
     runs-on: ubuntu-latest
     steps: 
       - name: Descargar codigo
