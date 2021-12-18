@@ -13,7 +13,7 @@ jobs:
       - name: Correr Unit Test
         run: gradle test
       - name: Build the app
-        run: gradlew assembleDebug
+        run: ./gradlew assembleDebug
       - name: Upload apk
         uses: actions/upload-artifact@v2
         with:
