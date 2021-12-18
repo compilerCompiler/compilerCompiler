@@ -1,0 +1,14 @@
+name : Script de Prueba
+on: [push]
+
+jobs:
+  primera:
+    name: Primera tarea
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Descargar codigo
+        uses: actions/checkout@v2
+      - name: Listado de archivos
+        run: ls
+      - name: Mostrar readme
+        run: cat README.md
