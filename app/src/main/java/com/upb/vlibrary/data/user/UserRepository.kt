@@ -63,5 +63,11 @@ class UserRepository(val network: UserNetworkController) {
         }
     }
 
+    fun getAllListOfUsers():Flow<List<UserInfo>>{
+        return flow {
+            emit(network.getAllListOfUsers())
+        }
+    }
+
 
 }
