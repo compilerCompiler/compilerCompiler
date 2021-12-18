@@ -1,4 +1,4 @@
-package com.upb.vlibrary.ui.unitTests
+package com.upb.vlibrary
 
 import com.google.common.truth.Truth.assertThat
 import com.upb.vlibrary.ui.register.RegisterFragment

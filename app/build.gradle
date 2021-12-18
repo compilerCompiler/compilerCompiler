@@ -8,6 +8,8 @@ plugins {
 android {
     compileSdk 31
 
+
+
     defaultConfig {
         applicationId "com.upb.vlibrary"
         minSdk 21
@@ -37,7 +39,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+
 }
+
+
 
 dependencies {
 
@@ -88,3 +94,4 @@ dependencies {
     testImplementation "com.google.truth:truth:1.0.1"
     androidTestImplementation "com.google.truth:truth:1.0.1"
 }
+
