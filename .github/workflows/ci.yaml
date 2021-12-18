@@ -1,17 +1,26 @@
-name : Prueba Unit Tests
-on: [push]
-
+name: Check Pull Request
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
 jobs:
-  primera:
+  test:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps: 
       - name: Descargar codigo
         uses: actions/checkout@v2
-      - name: Listado de archivos
-        run: ls
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Correr Unit Test
         run: gradle test
+  build:
+    name: build app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v2
       - name: Build the app
         run: ./gradlew assembleDebug
       - name: Upload apk
