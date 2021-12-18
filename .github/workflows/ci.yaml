@@ -10,5 +10,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Listado de archivos
         run: ls
-      - name: Mostrar readme
-        run: cat README.md
+      - name: Correr Unit Test
+        run: gradle test
