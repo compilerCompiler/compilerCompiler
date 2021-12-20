@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.upb.vlibrary.CompleteListOfUsersViewModel
 import com.upb.vlibrary.ListOfUsersViewModel
+import com.upb.vlibrary.NormalUsersTotalViewModel
 import com.upb.vlibrary.databinding.FragmentMenuAdminBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,8 +26,11 @@ class MenuAdminFragment : Fragment() {
 
     private lateinit var username:String
     private lateinit var password:String
+    private var totalUsers by Delegates.notNull<Int>()
+    private val normalUsersViewModel: NormalUsersTotalViewModel by viewModels()
     private var idUsuario by Delegates.notNull<Int>()
     private val args: MenuAdminFragmentArgs by navArgs()
+
     private lateinit var binding:FragmentMenuAdminBinding
     private val completeListOfUsersViewModel: CompleteListOfUsersViewModel by viewModels()
     override fun onCreateView(
@@ -64,11 +68,18 @@ class MenuAdminFragment : Fragment() {
             }
             binding.imgGrafica.setOnClickListener {
                 completeListOfUsersViewModel.getAllListOfUsers().onEach {
-                    Toast.makeText(context,"Primer elemento ${it[0]}",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context,"Total Usuarios ${it.size}",Toast.LENGTH_SHORT).show()
+                    totalUsers=it.size
                 }.catch {
-                    Toast.makeText(context,"Primer elemento ${it}",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context,"Ocurrio un errro con el total de usuarios",Toast.LENGTH_SHORT).show()
                 }.launchIn(CoroutineScope(Dispatchers.Main))
+                normalUsersViewModel.getNormalUsers().onEach {
+                    Toast.makeText(context,"Tamanio: ${it.size}",Toast.LENGTH_SHORT).show()
+                    val goToGraphPage = MenuAdminFragmentDirections.actionMenuAdminFragmentToGraficaFragment(totalUsers,it.size)
+                    findNavController().navigate(goToGraphPage)
+                }.catch {
 
+                }.launchIn(CoroutineScope(Dispatchers.Main))
             //listOfUsersViewModel.getAllListOfUsers()
                 //listOfUsersViewModel.completeListOfUsers.observe(viewLifecycleOwner){
                   //  Toast.makeText(context,"Primer elemento ${it}",Toast.LENGTH_SHORT).show()

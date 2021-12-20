@@ -13,7 +13,6 @@ class ListOfUsersViewModel :ViewModel(){
 
     val userRepository= UserRepository(UserNetworkControllerImp())
     val users = MutableLiveData<List<UsuarioPersona>>(listOf())
-    val completeListOfUsers = MutableLiveData<List<UserInfo>>(listOf())
 
     fun updateListUsers(){
         userRepository.getAllUsers().onEach {

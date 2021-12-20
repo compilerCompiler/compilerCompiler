@@ -9,5 +9,5 @@ data class UsuarioPersona (val Id_persona:Int,
                            val Nombre_usuario:String,
                            val Password:String,
                            val Correo:String,
-                           val Ultimo_Inicio:String):Serializable
+                           val Ultimo_inicio:String):Serializable
 
