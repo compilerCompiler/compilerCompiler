@@ -16,7 +16,7 @@ jobs:
       - name: Descargar codigo
         uses: actions/checkout@v2
       - name: Correr Unit Test
-        run: gradle test
+        run: ./gradlew cleanTestDebugUnitTest testDebugUnitTest --debug
   build:
     name: build app
     runs-on: ubuntu-latest
