@@ -34,4 +34,7 @@ interface UserAPI {
 
     @GET("api/administrador/{id}")
     suspend fun getAdmi(@Path("id") id_usuario: Int)
+
+    @GET("api/user/findAll")
+    suspend fun getAllListOfUsers():List<UserInfo>
 }

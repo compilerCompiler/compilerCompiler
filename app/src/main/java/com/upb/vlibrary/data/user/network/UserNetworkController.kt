@@ -17,4 +17,5 @@ interface UserNetworkController {
     suspend fun deletePersona(id_persona:Int)
     suspend fun deleteUsuario(id_usuario: Int)
     suspend fun getAdmi(id_usuario: Int)
+    suspend fun getAllListOfUsers():List<UserInfo>
 }

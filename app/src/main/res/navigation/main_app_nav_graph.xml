@@ -115,6 +115,9 @@
         <argument
             android:name="id_usuario"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_menuAdminFragment_to_graficaFragment"
+            app:destination="@id/graficaFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuUserFragment"
@@ -311,5 +314,17 @@
         <action
             android:id="@+id/action_successDeleteUserFragment_to_menuAdminFragment"
             app:destination="@id/menuAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graficaFragment"
+        android:name="com.upb.vlibrary.GraficaFragment"
+        android:label="GraficaFragment"
+        tools:layout="@layout/fragment_grafica">
+        <argument
+            android:name="total_users"
+            app:argType="integer" />
+        <argument
+            android:name="total_normal_users"
+            app:argType="integer" />
     </fragment>
 </navigation>

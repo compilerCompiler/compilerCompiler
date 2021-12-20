@@ -50,4 +50,8 @@ class UserNetworkControllerImp:UserNetworkController {
     override suspend fun getAdmi(id_usuario: Int) {
         return client.getAdmi(id_usuario)
     }
+
+    override suspend fun getAllListOfUsers(): List<UserInfo> {
+        return client.getAllListOfUsers()
+    }
 }
