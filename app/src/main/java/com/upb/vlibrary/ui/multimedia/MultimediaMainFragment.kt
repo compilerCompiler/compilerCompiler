@@ -11,8 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.upb.vlibrary.ListOfVideosAdapter
-import com.upb.vlibrary.ListOfVideosViewModel
-import com.upb.vlibrary.databinding.FragmentAdminBinding
+import com.upb.vlibrary.ui.viewmodels.ListOfVideosViewModel
 import com.upb.vlibrary.databinding.FragmentMultimediaMainBinding
 
 class MultimediaMainFragment: Fragment() {

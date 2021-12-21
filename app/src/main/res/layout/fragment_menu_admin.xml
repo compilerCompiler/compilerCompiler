@@ -88,4 +88,15 @@
         app:layout_constraintEnd_toEndOf="@+id/imgGrafica"
         app:layout_constraintStart_toStartOf="@+id/imgGrafica"
         app:layout_constraintTop_toTopOf="@+id/imgGrafica" />
+
+    <ImageView
+        android:id="@+id/imgHouseAdmi"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/blanco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_house" />
 </androidx.constraintlayout.widget.ConstraintLayout>

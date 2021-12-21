@@ -54,5 +54,9 @@ class MenuUserFragment : Fragment() {
                 MenuUserFragmentDirections.actionMenuUserFragmentToSupportFragment()
             findNavController().navigate(goToHelpPage)
         }
+        binding.imgHouseNormal.setOnClickListener {
+            val goToRegisterMain = MenuUserFragmentDirections.actionMenuUserFragmentToOptionsLoginfragment()
+            findNavController().navigate(goToRegisterMain)
+        }
     }
 }

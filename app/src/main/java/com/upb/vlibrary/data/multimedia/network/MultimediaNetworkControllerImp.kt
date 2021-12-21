@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MultimediaNetworkControllerImp: MultimediaNetworkController {
     val client= Retrofit.Builder()
-        .baseUrl("http://192.168.0.20:8080")
+        .baseUrl("https://vlibrary-official.herokuapp.com")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(MultimediaAPI::class.java)

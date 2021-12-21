@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.upb.vlibrary.PersonaViewModel
+import com.upb.vlibrary.ui.viewmodels.PersonaViewModel
 import com.upb.vlibrary.databinding.FragmentRegisterBinding
 
 import kotlinx.coroutines.CoroutineScope
