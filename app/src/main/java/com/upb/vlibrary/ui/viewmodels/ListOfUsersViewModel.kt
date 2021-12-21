@@ -1,7 +1,8 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.upb.vlibrary.UsuarioPersona
 import com.upb.vlibrary.data.user.UserRepository
 import com.upb.vlibrary.data.user.network.UserNetworkControllerImp
 import kotlinx.coroutines.CoroutineScope

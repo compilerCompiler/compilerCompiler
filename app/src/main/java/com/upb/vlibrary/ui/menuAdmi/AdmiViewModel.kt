@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.menuAdmi
 
 import androidx.lifecycle.ViewModel
 import com.upb.vlibrary.data.user.UserRepository

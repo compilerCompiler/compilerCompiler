@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.upb.vlibrary.DeleteElementsViewModel
+import com.upb.vlibrary.ui.viewmodels.DeleteElementsViewModel
 import com.upb.vlibrary.UsuarioPersona
 import com.upb.vlibrary.databinding.FragmentUserDetailsBinding
 import kotlinx.coroutines.CoroutineScope

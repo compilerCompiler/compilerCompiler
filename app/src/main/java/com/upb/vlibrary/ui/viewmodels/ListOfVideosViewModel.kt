@@ -1,7 +1,8 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.upb.vlibrary.Video
 import com.upb.vlibrary.data.multimedia.MultimediaRepository
 import com.upb.vlibrary.data.multimedia.network.MultimediaNetworkControllerImp
 import kotlinx.coroutines.CoroutineScope

@@ -1,4 +1,4 @@
-package com.upb.vlibrary
+package com.upb.vlibrary.ui.graph
 
 import android.graphics.Color
 import android.os.Bundle

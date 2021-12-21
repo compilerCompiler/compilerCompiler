@@ -10,9 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.upb.vlibrary.CompleteListOfUsersViewModel
-import com.upb.vlibrary.ListOfUsersViewModel
-import com.upb.vlibrary.NormalUsersTotalViewModel
+import com.upb.vlibrary.ui.viewmodels.CompleteListOfUsersViewModel
+import com.upb.vlibrary.ui.viewmodels.NormalUsersTotalViewModel
 import com.upb.vlibrary.databinding.FragmentMenuAdminBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
