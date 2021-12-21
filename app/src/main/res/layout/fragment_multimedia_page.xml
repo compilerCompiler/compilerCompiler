@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="@id/guidelineRigthMult"
             app:layout_constraintStart_toStartOf="@id/guidelineLeftMult"
             app:layout_constraintTop_toTopOf="parent"
-            app:videoId="qwb8qSw1d7s"
+            app:videoId="W6NZfCO5SIk"
             app:autoPlay="true"
             app:showYouTubeButton="false"/>
 

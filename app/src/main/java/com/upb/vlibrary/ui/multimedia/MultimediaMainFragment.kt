@@ -39,7 +39,7 @@ class MultimediaMainFragment: Fragment() {
         }
 
         listOfVideosAdapter.setOnVideoClickListener {
-            Toast.makeText(context,"Se toco el video con id : ${it.Id_video}", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context,"Se toco el video con id : ${it.Id_video}", Toast.LENGTH_SHORT).show()
             val goToVideoPage = MultimediaMainFragmentDirections.actionMultimediaMainFragmentToMultimediaPageFragment(it)
             findNavController().navigate(goToVideoPage)
         }
