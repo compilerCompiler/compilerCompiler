@@ -118,6 +118,9 @@
         <action
             android:id="@+id/action_menuAdminFragment_to_graficaFragment"
             app:destination="@id/graficaFragment" />
+        <action
+            android:id="@+id/action_menuAdminFragment_to_optionsLoginfragment"
+            app:destination="@id/optionsLoginfragment" />
     </fragment>
     <fragment
         android:id="@+id/menuUserFragment"
@@ -145,6 +148,9 @@
         <argument
             android:name="id_usuario"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_menuUserFragment_to_optionsLoginfragment"
+            app:destination="@id/optionsLoginfragment" />
     </fragment>
     <fragment
         android:id="@+id/multimediaMainFragment"

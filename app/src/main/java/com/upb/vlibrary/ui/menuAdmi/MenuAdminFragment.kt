@@ -78,8 +78,10 @@ class MenuAdminFragment : Fragment() {
                 }.catch {
 
                 }.launchIn(CoroutineScope(Dispatchers.Main))
-
-
+            }
+            binding.imgHouseAdmi.setOnClickListener {
+                val goToRegisterMenu = MenuAdminFragmentDirections.actionMenuAdminFragmentToOptionsLoginfragment()
+                findNavController().navigate(goToRegisterMenu)
             }
 
     }
