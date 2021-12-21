@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ArticleNetworkControllerImp:ArticleNetworkController {
     val client= Retrofit.Builder()
-        .baseUrl("http://192.168.0.20:8080")
+        .baseUrl("https://vlibrary-official.herokuapp.com")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(ArticleAPI::class.java)
